@@ -7,16 +7,15 @@
     <title>Salon Hadakari - Premium Beauty Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="CSS File/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav id="navbar">
         <img src="salon-logo.png" alt="Salon Hadakari Logo" class="logo">
-
-        <div class="nav-links">
+        
+        <div class="nav-links" id="navLinks">
             <a href="#">Home</a>
             <a href="#">Services</a>
             <a href="#">About</a>
@@ -25,7 +24,10 @@
             <a href="#">Contact</a>
         </div>
 
-        <button class="book-btn">Book Now</button>
+        <button class="book-btn mobile-hidden">Book Now</button>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -43,8 +45,8 @@
             <p>Welcome to salon Hadakari, where elegance meets you. Step into a space designed to celebrate your unique
                 beauty with expert care and sophisticated style. From precision haircuts and vibrant colors to
                 rejuvenating facials and flawless nails, our team blends artistry with warmth to ensure every visit
-                feels personal, relaxing, and empowering. Whether you’re preparing for a big event or just treating
-                yourself to a moment of luxury, we’re here to make you shine gracefully, confidently, effortlessly.</p>
+                feels personal, relaxing, and empowering. Whether you're preparing for a big event or just treating
+                yourself to a moment of luxury, we're here to make you shine gracefully, confidently, effortlessly.</p>
             <div class="btn-group">
                 <button class="primary-btn">Our Services</button>
                 <button class="secondary-btn">Learn More</button>
@@ -56,12 +58,12 @@
     <section class="image-text-section">
         <div class="container">
             <div class="image-wrapper">
-                <img src="https://images.pexels.com/photos/5128267/pexels-photo-5128267.jpeg?_gl=1*6gb7x6*_ga*MzcxNjAxNDYyLjE3MzI5ODYyNTg.*_ga_8JE65Q40S6*czE3NTMxNjg3NzIkbzY4JGcxJHQxNzUzMTY4ODkyJGoxNCRsMCRoMA.. "
+                <img src="https://images.pexels.com/photos/5128267/pexels-photo-5128267.jpeg?_gl=1*6gb7x6*_ga*MzcxNjAxNDYyLjE3MzI5ODYyNTg.*_ga_8JE65Q40S6*czE3NTMxNjg3NzIkbzY4JGcxJHQxNzUzMTY4ODkyJGoxNCRsMCRoMA.. " 
                     alt="Sample Image" class="section-image">
             </div>
             <div class="content-wrapper">
                 <h1 class="section-title">Discover Amazing Things</h1>
-                <p class="section-text">At Salon Hdakari , we offer a carefully curated range of beauty services
+                <p class="section-text">At Salon Hdakari, we offer a carefully curated range of beauty services
                     designed to inspire elegance and boost your confidence. From stylish haircuts and vibrant coloring
                     to rejuvenating facials and flawless nail care, each treatment is delivered with expert attention
                     and a warm touch. Our bridal and event glam services ensure you shine on your most special days,
@@ -74,15 +76,14 @@
     </section>
 
     <!-- section two -->
-
     <section class="cards-section">
         <div class="container">
             <div class="section-header">
                 <h1>Featured Services</h1>
-                <p>I Salon Hadakari , every service is designed to celebrate your unique beauty. From personalized
+                <p>At Salon Hadakari, every service is designed to celebrate your unique beauty. From personalized
                     haircuts and vibrant coloring to rejuvenating facials and indulgent nail care, we combine expertise
                     with elegance. Whether you're prepping for a special event or seeking everyday glow, our team
-                    delivers styling that’s as confident as it is refined. So , You must be select us. !</p>
+                    delivers styling that's as confident as it is refined. So, You must select us!</p>
             </div>
 
             <div class="cards-grid">
@@ -104,7 +105,7 @@
                         alt="card 2" class="card-image">
                     <div class="card-content">
                         <h3>Bridal & Event Glam</h3>
-                        <p>Radiate elegance on your special day with makeup, hair, and styling that’s unforgettable.</p>
+                        <p>Radiate elegance on your special day with makeup, hair, and styling that's unforgettable.</p>
                         <button class="card-btn">Get Started</button>
                     </div>
                 </div>
@@ -137,13 +138,11 @@
     </section>
 
     <!-- section 3 -->
-
-    <section class="image-text-section">
+    <section class="image-text-section reverse-section">
         <div class="container">
-
             <div class="content-wrapper">
                 <h1 class="section-title">Discover Amazing Things</h1>
-                <p class="section-text">At Salon Hdakari , we offer a carefully curated range of beauty services
+                <p class="section-text">At Salon Hdakari, we offer a carefully curated range of beauty services
                     designed to inspire elegance and boost your confidence. From stylish haircuts and vibrant coloring
                     to rejuvenating facials and flawless nail care, each treatment is delivered with expert attention
                     and a warm touch. Our bridal and event glam services ensure you shine on your most special days,
@@ -160,7 +159,6 @@
     </section>
 
     <!--Feedback section-->
-
     <section class="testimonials-section">
         <div class="container">
             <h2>What Our Customers Say</h2>
@@ -173,7 +171,6 @@
                             true artists who understand exactly what I want. The relaxing atmosphere makes every visit a
                             pampering experience."</p>
                         <div class="customer-info">
-
                             <div>
                                 <h4>Sarah J.</h4>
                                 <p class="customer-location">New York, NY</p>
@@ -189,7 +186,6 @@
                         <p class="testimonial-text">"Great service and attention to detail. My color came out exactly
                             how I wanted it. Will definitely be coming back!"</p>
                         <div class="customer-info">
-
                             <div>
                                 <h4>Michael T.</h4>
                                 <p class="customer-location">Chicago, IL</p>
@@ -205,7 +201,6 @@
                         <p class="testimonial-text">"The best salon I've ever been to. They took the time to understand
                             exactly what I wanted and delivered beyond my expectations."</p>
                         <div class="customer-info">
-
                             <div>
                                 <h4>Emily R.</h4>
                                 <p class="customer-location">Los Angeles, CA</p>
@@ -285,9 +280,6 @@
             </div>
         </div>
     </footer>
-
-
-
 
     <script src="Javascript File/index.js"></script>
 </body>
