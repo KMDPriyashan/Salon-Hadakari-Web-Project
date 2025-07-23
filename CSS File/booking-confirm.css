@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #EFB018;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #EFB018;
+}
+
+.nav-links a.active {
+    color: #EFB018;
+    font-weight: 600;
+}
+
+.nav-links a.active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #EFB018;
+}
+
+.confirm-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.confirm-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.header-icon {
+    width: 80px;
+    height: 80px;
+    background: #EFB018;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 36px;
+    box-shadow: 0 10px 30px rgba(239, 176, 24, 0.3);
+}
+
+.confirm-header h1 {
+    font-size: 42px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.confirm-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.booking-details {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.details-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.detail-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon {
+    width: 50px;
+    height: 50px;
+    background: #EFB018;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-card h2 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detail-value {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.staff-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.staff-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    border: 3px solid #EFB018;
+}
+
+.staff-info h4 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.staff-title {
+    color: #EFB018;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-form {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-header h2 i {
+    margin-right: 10px;
+    color: #EFB018;
+}
+
+.form-header p {
+    color: #777;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
+    font-size: 16px;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.input-with-icon input,
+.input-with-icon textarea {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.input-with-icon input:focus,
+.input-with-icon textarea:focus {
+    border-color: #EFB018;
+    box-shadow: 0 0 0 3px rgba(239, 176, 24, 0.2);
+    outline: none;
+}
+
+.input-with-icon textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    color: #777;
+    font-size: 13px;
+}
+
+.confirmation-message {
+    background: #f8f4e5;
+    border-left: 4px solid #EFB018;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.message-icon {
+    color: #EFB018;
+    font-size: 24px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.confirmation-message p {
+    color: #555;
+    font-size: 15px;
+}
+
+.confirmation-message strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.confirmation-message span {
+    color: #EFB018;
+    font-weight: 600;
+}
+
+.terms-section {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.terms-section h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.terms-section h2 i {
+    margin-right: 15px;
+    color: #EFB018;
+}
+
+.terms-intro {
+    color: #777;
+    margin-bottom: 25px;
+        line-height: 1.7;
+}
+
+.terms-content {
+    margin-bottom: 30px;
+}
+
+.terms-content h3 {
+    font-size: 20px;
+    color: #000;
+    margin: 25px 0 15px;
+    font-weight: 600;
+}
+
+.terms-content p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.terms-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.terms-content li {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input {
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.checkbox-group label {
+    color: #555;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.checkbox-group label a {
+    color: #EFB018;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-group label a:hover {
+    text-decoration: underline;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #EFB018;
+    color: #EFB018;
+}
+
+.btn-outline:hover {
+    background: #EFB018;
+    color: white;
+}
+
+.btn-primary {
+    background: #EFB018;
+    color: white;
+    box-shadow: 0 5px 15px rgba(239, 176, 24, 0.3);
+}
+
+.btn-primary:hover {
+    background: #e0a716;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(239, 176, 24, 0.4);
+}
+.confirm-btn{
+    background: blue;
+    color: white;
+    box-shadow: 0 5px 15px rgba(239, 176, 24, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .booking-details {
+        flex-direction: column;
+    }
+    
+    .detail-card {
+        padding: 25px;
+    }
+    
+    .contact-form {
+        padding: 30px;
+    }
+    
+    .terms-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .confirm-header h1 {
+        font-size: 32px;
+    }
+    
+    .header-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .confirm-container {
+        margin: 30px auto;
+    }
+    
+    .confirm-header {
+        margin-bottom: 40px;
+    }
+    
+    .confirm-header h1 {
+        font-size: 28px;
+    }
+    
+    .confirm-header p {
+        font-size: 16px;
+    }
+    
+    .detail-card {
+        padding: 20px;
+    }
+    
+    .contact-form {
+        padding: 25px 20px;
+    }
+    
+    .terms-section {
+        padding: 25px 20px;
+    }
+    
+    .terms-section h2 {
+        font-size: 24px;
+    }
+}
+/* Add these to your stylesheet */
+.session-warning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.session-warning {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.warning-text {
+    color: #EFB018;
+    font-weight: bold;
+}
+
+.error-text {
+    color: #ff4444;
+}
+
+.booking-success {
+    background: #e8f5e9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: block;
+}
