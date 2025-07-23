@@ -7,27 +7,30 @@
     <title>Salon Hadakari - Premium Beauty Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="CSS File/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav id="navbar">
         <img src="salon-logo.png" alt="Salon Hadakari Logo" class="logo">
-        
+
+        <!-- Add this button for mobile menu -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <div class="nav-links" id="navLinks">
             <a href="#">Home</a>
             <a href="#">Services</a>
             <a href="#">About</a>
             <a href="#">Gallery</a>
-            <a href="#">Products</a>
             <a href="#">Contact</a>
+            <a href="booking.html">Booking</a>
         </div>
-
-        <button class="book-btn mobile-hidden">Book Now</button>
-        <button class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -48,8 +51,8 @@
                 feels personal, relaxing, and empowering. Whether you're preparing for a big event or just treating
                 yourself to a moment of luxury, we're here to make you shine gracefully, confidently, effortlessly.</p>
             <div class="btn-group">
-                <button class="primary-btn">Our Services</button>
-                <button class="secondary-btn">Learn More</button>
+                <a href="services.html"><button class="primary-btn">Our Services</button></a>
+                <a href="booking.html"><button class="secondary-btn">Appointment</button></a>
             </div>
         </div>
     </section>
@@ -58,7 +61,7 @@
     <section class="image-text-section">
         <div class="container">
             <div class="image-wrapper">
-                <img src="https://images.pexels.com/photos/5128267/pexels-photo-5128267.jpeg?_gl=1*6gb7x6*_ga*MzcxNjAxNDYyLjE3MzI5ODYyNTg.*_ga_8JE65Q40S6*czE3NTMxNjg3NzIkbzY4JGcxJHQxNzUzMTY4ODkyJGoxNCRsMCRoMA.. " 
+                <img src="https://images.pexels.com/photos/5128267/pexels-photo-5128267.jpeg?_gl=1*6gb7x6*_ga*MzcxNjAxNDYyLjE3MzI5ODYyNTg.*_ga_8JE65Q40S6*czE3NTMxNjg3NzIkbzY4JGcxJHQxNzUzMTY4ODkyJGoxNCRsMCRoMA.. "
                     alt="Sample Image" class="section-image">
             </div>
             <div class="content-wrapper">
