@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Hadakari - Booking</title>
+    <link rel="stylesheet" href="CSS File/booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Salon Hadakari</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="active">Booking</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>Step into Radiance at Salon Hadakari</h1>
+            <h3>Ready for a little indulgence?</h3>
+            <p>Book your appointment with our expert stylists and experience premium salon services in a relaxing environment. Schedule your appointment today and let us take care of your beauty needs.</p>
+        </div>
+    </div>
+
+    <div class="booking-container">
+        <div class="booking-step" id="step1">
+            <h2>Select Your Stylist</h2>
+            <div class="staff-cards">
+                <div class="staff-card animate__animated animate__fadeInUp" data-staff="K.M.D Priyashan">
+                    <div class="staff-image" style="background-image: url('https://randomuser.me/api/portraits/women/43.jpg')"></div>
+                    <div class="staff-info">
+                        <h4>K.M.D Priyashan</h4>
+                        <div class="staff-details">
+                            <p><i class="fas fa-award"></i> Master Stylist</p>
+                            <p><i class="fas fa-clock"></i> 10 Years Experience</p>
+                            <p><i class="fas fa-star"></i> Specializes in Hair Coloring</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="staff-card animate__animated animate__fadeInUp animate__delay-1s" data-staff="M.K.D.G Thathsarani">
+                    <div class="staff-image" style="background-image: url('https://randomuser.me/api/portraits/women/65.jpg')"></div>
+                    <div class="staff-info">
+                        <h4>M.K.D.G Thathsarani</h4>
+                        <div class="staff-details">
+                            <p><i class="fas fa-award"></i> Senior Stylist</p>
+                            <p><i class="fas fa-clock"></i> 8 Years Experience</p>
+                            <p><i class="fas fa-star"></i> Specializes in Hair Treatments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="staff-card animate__animated animate__fadeInUp animate__delay-2s" data-staff="K.K.R Perera">
+                    <div class="staff-image" style="background-image: url('https://randomuser.me/api/portraits/women/33.jpg')"></div>
+                    <div class="staff-info">
+                        <h4>K.K.R Perera</h4>
+                        <div class="staff-details">
+                            <p><i class="fas fa-award"></i> Master Stylist</p>
+                            <p><i class="fas fa-clock"></i> 10 Years Experience</p>
+                            <p><i class="fas fa-star"></i> Specializes in Haircuts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="nextStep(1)">Next</button>
+            <p class="info-text">Salon Hadakari will need to approve your request date and time in order to confirm your appointment!</p>
+        </div>
+
+        <div class="booking-step hidden" id="step2">
+            <h2>Select Your Preferred Date</h2>
+            <div class="date-picker">
+                <div class="month-header">
+                    <button class="nav-btn prev-month"><i class="fas fa-chevron-left"></i></button>
+                    <h3 class="current-month">November 2025</h3>
+                    <button class="nav-btn next-month"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="week-days">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days-grid"></div>
+            </div>
+            <button class="next-btn" onclick="nextStep(2)">Next</button>
+            <p class="info-text">Salon Hadakari will need to approve your request date and time in order to confirm your appointment!</p>
+        </div>
+
+        <div class="booking-step hidden" id="step3">
+            <h2>Select Your Preferred Time</h2>
+            <div class="time-slots">
+                <div class="time-row">
+                    <div class="time-slot">9:00 AM</div>
+                    <div class="time-slot">9:30 AM</div>
+                    <div class="time-slot">10:00 AM</div>
+                    <div class="time-slot">10:30 AM</div>
+                    <div class="time-slot">11:00 AM</div>
+                </div>
+                <div class="time-row">
+                    <div class="time-slot">11:30 AM</div>
+                    <div class="time-slot">12:00 PM</div>
+                    <div class="time-slot">12:30 PM</div>
+                    <div class="time-slot">1:00 PM</div>
+                    <div class="time-slot">1:30 PM</div>
+                </div>
+                <div class="time-row">
+                    <div class="time-slot">2:00 PM</div>
+                    <div class="time-slot">2:30 PM</div>
+                    <div class="time-slot">3:00 PM</div>
+                    <div class="time-slot">3:30 PM</div>
+                    <div class="time-slot">4:00 PM</div>
+                </div>
+                <div class="time-row">
+                    <div class="time-slot">4:30 PM</div>
+                    <div class="time-slot">5:00 PM</div>
+                    <div class="time-slot">5:30 PM</div>
+                    <div class="time-slot">6:00 PM</div>
+                    <div class="time-slot">6:30 PM</div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="confirmBooking()">Confirm Booking</button>
+            <p class="info-text">Salon Hadakari will need to approve your request date and time in order to confirm your appointment!</p>
+        </div>
+    </div>
+
+    <script src="Javascript File/booking.js"></script>
+</body>
+</html>

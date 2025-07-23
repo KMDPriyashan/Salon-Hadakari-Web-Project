@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Hadakari - Confirm Booking</title>
+    <link rel="stylesheet" href="CSS File/booking-confirm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Salon Hadakari</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" class="active">Booking</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="confirm-container">
+        <div class="confirm-header animate__animated animate__fadeIn">
+            <div class="header-icon">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <h1>Confirm Your Appointment</h1>
+            <p>Please review your booking details and complete the form below to confirm your appointment at Salon
+                Hadakari.</p>
+        </div>
+
+        <div class="booking-details animate__animated animate__fadeInUp">
+            <div class="details-section">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2>Stylist</h2>
+                    <div class="staff-info" id="confirm-staff">
+                        <div class="staff-image"
+                            style="background-image: url('https://randomuser.me/api/portraits/women/33.jpg')"></div>
+                        <h4>K.K.R Perera</h4>
+                        <p class="staff-title">Master Stylist</p>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <h2>Date</h2>
+                    <p id="confirm-date" class="detail-value">15 November 2025</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h2>Time</h2>
+                    <p id="confirm-time" class="detail-value">5.00 PM</p>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h2>Location</h2>
+                    <p class="detail-value">Salon Hadakari<br>123 Beauty Street<br>Colombo, Sri Lanka</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <div class="form-header">
+                    <h2><i class="fas fa-user-edit"></i> Your Information</h2>
+                    <p>Please fill in your details to complete the booking</p>
+                </div>
+
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">WhatsApp Number *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-phone"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your WhatsApp number" required>
+                        </div>
+                        <small>We'll send confirmation via WhatsApp</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="salon-phone">Salon Contact Number</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-store"></i>
+                            <input type="text" id="salon-phone" name="salon-phone" value="+94 762395034" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Special Requests</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-comment"></i>
+                            <textarea id="message" name="message" rows="3"
+                                placeholder="Any special requests or notes for your appointment"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="confirm-btn" id="request-appointment">
+                        <span class="btn-text">Confirm Appointment</span>
+                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                    </button>
+                </form>
+
+                <div class="confirmation-message animate__animated animate__fadeIn">
+                    <div class="message-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <p>Your appointment at <strong>Salon Hadakari</strong> is confirmed for <span
+                            id="final-date">[Date]</span> at <span id="final-time">[Time]</span>. We're excited to
+                        pamper you! A confirmation will be sent to your WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="terms-section animate__animated animate__fadeInUp">
+            <h2><i class="fas fa-file-alt"></i> Terms & Conditions</h2>
+            <p class="terms-intro">Please review and accept our terms to complete your booking:</p>
+
+            <div class="terms-checkboxes">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="term1" name="term1">
+                    <label for="term1">I understand that late arrivals may result in reduced service time and I agree to
+                        arrive at least 10 minutes before my appointment.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="term2" name="term2">
+                    <label for="term2">I agree to cancel or reschedule my appointment at least 24 hours in advance to
+                        avoid cancellation fees.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="term3" name="term3">
+                    <label for="term3">I understand payment is due at the time of service and accept the payment methods
+                        available.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="term4" name="term4">
+                    <label for="term4">I agree to notify the salon within 48 hours if I'm not satisfied with my
+                        service.</label>
+                </div>
+            </div>
+
+            
+
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="Javascript File/booking-confirm.js"></script>
+</body>
+
+</html>
